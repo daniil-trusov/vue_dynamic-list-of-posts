@@ -19,7 +19,7 @@ const register = async () => {
   if (!name.value.trim()) {
     nameError.value = ErrorMessages.Name_Is_Required
   }
-  if (emailError.value.value || nameError.value.value) {
+  if (emailError.value || nameError.value) {
     return
   }
 

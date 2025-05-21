@@ -1,4 +1,6 @@
-<script setup></script>
+<script setup>
+import Loader from './Loader.vue'
+</script>
 
 <template>
   <div class="is-flex is-justify-content-center is-align-items-center mt-2">

@@ -10,13 +10,13 @@ export const getPosts = async (): Promise<Post[]> => {
   return response.data
 }
 
-export const getPost = async (id) => {
+export const getPost = async (id: number) => {
   const response = await client.get(`/posts/${id}`)
 
   return response.data
 }
 
-export const createPost = async (title, body): Promise<Post> => {
+export const createPost = async (title: string, body: string): Promise<Post> => {
   const response = await client.post('/posts', {
     userId: USER_ID,
     title,
@@ -26,7 +26,7 @@ export const createPost = async (title, body): Promise<Post> => {
   return response.data
 }
 
-export const updatePost = async (id, title, body): Promise<Post> => {
+export const updatePost = async (id: number, title: string, body: string): Promise<Post> => {
   const response = await client.patch(`/posts/${id}`, {
     title,
     body,
@@ -35,7 +35,7 @@ export const updatePost = async (id, title, body): Promise<Post> => {
   return response.data
 }
 
-export const deletePost = async (id): Promise<Post> => {
+export const deletePost = async (id: number): Promise<Post> => {
   const response = await client.delete(`/posts/${id}`)
 
   return response.data
